@@ -161,14 +161,24 @@ h2 {
 
 .upper-nav li a {
   text-decoration: none;
+  transition: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   padding: 28px 0;
   color: var(--black-color);
+  transition: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-
+/*
+.upper-nav li a::after {
+  content: "Посмотрите на этот оранжевый прямоугольник.";
+  background-color: #ffba10;
+  border-color: black;
+  border-style: dotted;
+}
+*/
 .upper-nav li a:hover,
 .upper-nav li a:focus {
   color: var(--main-color);
-  border-bottom: 4px solid var(--main-color);
 }
 
 .upper-contact {
@@ -180,12 +190,6 @@ h2 {
   font-size: 14px;
   display: flex;
   text-decoration: none;
-}
-
-.upper-contact li a {
-  text-decoration: none;
-  padding: 32px 0;
-  color: var(--black-color);
 }
 
 .upper-contact li {
@@ -201,7 +205,10 @@ h2 {
 
 .upper-contact li a {
   text-decoration: none;
+  padding: 32px 0;
   color: rgba(117, 117, 117, 1);
+  transition: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .upper-contact li svg {
@@ -328,13 +335,14 @@ h2 {
   border-radius: 50%;
   background: #FFFFFF1A;
   cursor: pointer;
+  transition: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .bottom-user-social-icon-bg svg {
   width: 20px;
   height: 20px;
 }
-
 
 .bottom-user-social-icon-bg:hover,
 .bottom-user-social-icon-bg:focus{
@@ -372,6 +380,7 @@ h2 {
   text-transform: uppercase;
   color: var(--white-color);
 }
+
 .center-overlay {
   display: flex;
   flex-direction: column;
@@ -379,6 +388,7 @@ h2 {
   align-content: center;
   justify-content: center;
   position: fixed;
+  background: rgba(0, 0, 0, 0.20);
   top: 0;
   bottom: 0;
   left: 0;
@@ -423,7 +433,7 @@ h2 {
   background: #fff;
   border-radius: 5px;
   position: relative;
-  transition: all 5s ease-in-out;
+  transition: 5s ease-in-out;
   width: 528px;
   height: 581px;
   box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.20), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
@@ -437,7 +447,8 @@ h2 {
   position: absolute;
   top: 8px;
   right: 8px;
-  transition: all 200ms;
+  transition: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   font-size: 30px;
   text-decoration: none;
   color: #333;
@@ -501,16 +512,65 @@ h2 {
   justify-content: center;
 }
 
-.pictures-work-list {
+.pictures-work-lists {
   display: flex;
   list-style-type: none;
   padding: 0;
   margin: 0;
 }
 
-.pictures-work-list li:not(:last-child) {
+.pictures-work-lists li:not(:last-child) {
   margin-right: auto;
 }
+
+.pictures-work-list-description{
+  width: 370px;
+  height: 70px;
+  background: rgba(47, 48, 58, 0.80);
+}
+
+
+
+
+
+
+.pictures-work-list {
+  position: relative;
+  width: 50%;
+}
+
+.pictures-work-list-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0.9;
+  background: rgba(47, 48, 58, 0.80);
+}
+
+.pictures-work-list .pictures-work-list-description{
+  width: 370px;
+  height: 70px;
+}
+.pictures-work-list-description h3{
+  margin: 0;
+  color: #FFF;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.42px;
+  text-transform: uppercase;
+}
+
+
+
 
 .section-workers {
   background: var(--white-bg-color);
@@ -570,18 +630,20 @@ h2 {
   height: 44px;
   border-radius: 50%;
   background: transparent;
-  /* transition: 0.3s; */
 }
   
 .user-social-icon-bg{
+  display: flex;
   position: relative;
   width: 44px;
   height: 44px;
-  display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
   align-content: center;
   cursor: pointer;
+  border-radius: 50%;
+  transition: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .user-social-icon-bg svg {
@@ -627,6 +689,8 @@ h2 {
   border: 1px solid #AFB1B8;
   fill: #AFB1B8;
   cursor: pointer;
+  transition: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .section-icons a:hover,
@@ -663,6 +727,8 @@ h2 {
   text-align: center;
   letter-spacing: 0.48px;
   color: var(--black-grey-color);
+  transition: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .main-buttons button:hover,
@@ -689,6 +755,8 @@ h2 {
   display: block;
   width: 370px;
   background: var(--white-color);
+  transition: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .main-pic-list a:hover ,
 .main-pic-list a:focus {
@@ -753,7 +821,7 @@ a:focus .main-pic-list-overlay{
 .text {
   padding: 63px 24px;
   color: #FFF;
-  font-family: Roboto;
+  font-family: "Roboto", sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;

@@ -9,6 +9,7 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
       rel="stylesheet"
     />
+    <script src="./js/modal.js" defer></script>
     <title>Web Studio (Version 2.1)</title>
   </head>
   <body>
@@ -50,17 +51,14 @@
       <section class="center">
         <div class="container center-image flex-column-center">
           <h1 class="center-title">Ефективні рішення для вашого бізнесу</h1>
-          <button class="center-button" onclick="window.location.href='#center-button-popup';" type="button">Замовити послугу</button>
+          <button data-modal-open id="modal-button" class="center-button" type="button">Замовити послугу</button>
         </div>
-        <section>
-          <div id="center-button-popup" class="center-overlay">
-            <div class="center-button-popup">
-              <a class="center-overlay-close" href="#">&times;</a>
-              <div>
-              </div>
-            </div>
+            <!--Modal-->
+        <div class="center-overlay" data-modal>
+          <div class="center-button-popup">
+             <a data-modal-close class="center-overlay-close" href="#">&times;</a>
           </div>
-        </section>
+        </div>
       </section>
       <section class="content one-tab">
         <div class="container">
@@ -336,7 +334,7 @@
           <h2>Постійні клієнти</h2>
           <ul>
             <li>
-              <a href="">         
+              <a href="">
                 <svg width="106" height="60">
                   <use href="images/icons.svg#icon-Logo"></use>
                 </svg>
@@ -350,7 +348,7 @@
               </a>
             </li>
             <li>
-              <a href="">         
+              <a href="">
                 <svg width="106" height="60">
                   <use href="images/icons.svg#icon-Logo2"></use>
                 </svg>
@@ -371,7 +369,7 @@
               </a>
             </li>
             <li>
-              <a href="">         
+              <a href="">
                 <svg width="106" height="60">
                   <use href="images/icons.svg#icon-Logo5"></use>
                 </svg>

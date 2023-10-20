@@ -161,12 +161,11 @@ h2 {
 
 .upper-nav li a {
   text-decoration: none;
-  transition: 250ms;
+  transition-duration: 250ms;
+  transition-property: color;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  padding: 28px 0;
+  padding: 27px 0;
   color: var(--black-color);
-  transition: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 /*
 .upper-nav li a::after {
@@ -207,12 +206,16 @@ h2 {
   text-decoration: none;
   padding: 32px 0;
   color: rgba(117, 117, 117, 1);
-  transition: 250ms;
+  transition-duration: 250ms;
+  transition-property: color, fill;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .upper-contact li svg {
   fill: var(--white-grey-color);
+  transition-duration: 250ms;
+  transition-property: color, fill;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .upper-contact a:hover,
@@ -335,7 +338,8 @@ h2 {
   border-radius: 50%;
   background: #FFFFFF1A;
   cursor: pointer;
-  transition: 250ms;
+  transition-duration: 250ms;
+  transition-property: background-color, color, fill;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -393,13 +397,15 @@ h2 {
   bottom: 0;
   left: 0;
   right: 0;
-  transition: opacity 500ms;
+  transition-duration: 500ms;
+  transition-property: background-color, box-shadow, opacity, visibility;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   visibility: hidden;
   opacity: 0;
   z-index: 2;
 }
 
-.center-overlay:target {
+.center-overlay-target {
   visibility: visible;
   opacity: 1;
 }
@@ -425,6 +431,7 @@ h2 {
   background: var(--active-button-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
   color: var(--white-color);
+  
 }
 
 .center-button-popup {
@@ -433,7 +440,9 @@ h2 {
   background: #fff;
   border-radius: 5px;
   position: relative;
-  transition: 5s ease-in-out;
+  transition-duration: 500ms;
+  transition-property: background-color, box-shadow, opacity, visibility;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   width: 528px;
   height: 581px;
   box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.20), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
@@ -447,8 +456,6 @@ h2 {
   position: absolute;
   top: 8px;
   right: 8px;
-  transition: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   font-size: 30px;
   text-decoration: none;
   color: #333;
@@ -456,7 +463,9 @@ h2 {
   border-radius: 50%;
   width: 30px;
   height: 30px;
-
+  transition-duration: 250ms;
+  transition-property: color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
   
 .center-button-popup .center-overlay-close:hover,
@@ -529,11 +538,6 @@ h2 {
   background: rgba(47, 48, 58, 0.80);
 }
 
-
-
-
-
-
 .pictures-work-list {
   position: relative;
   width: 50%;
@@ -568,9 +572,6 @@ h2 {
   letter-spacing: 0.42px;
   text-transform: uppercase;
 }
-
-
-
 
 .section-workers {
   background: var(--white-bg-color);
@@ -642,7 +643,8 @@ h2 {
   align-content: center;
   cursor: pointer;
   border-radius: 50%;
-  transition: 250ms;
+  transition-duration: 250ms;
+  transition-property: background-color, color, fill;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -689,7 +691,8 @@ h2 {
   border: 1px solid #AFB1B8;
   fill: #AFB1B8;
   cursor: pointer;
-  transition: 250ms;
+  transition-duration: 250ms;
+  transition-property: fill, border;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -727,7 +730,8 @@ h2 {
   text-align: center;
   letter-spacing: 0.48px;
   color: var(--black-grey-color);
-  transition: 250ms;
+  transition-duration: 250ms;
+  transition-property: background-color, color, box-shadow;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -755,7 +759,8 @@ h2 {
   display: block;
   width: 370px;
   background: var(--white-color);
-  transition: 250ms;
+  transition-duration: 250ms;
+  transition-property: background-color, color,  box-shadow;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .main-pic-list a:hover ,
@@ -809,7 +814,10 @@ h2 {
   width: 100%;
   bottom: 100px;
   height: 0;
-  transition: .5s ease;
+  transition-duration: 500ms;
+  transition-property: box-shadow, height;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  /*transition: .5s ease;*/
 }
 
 a:hover .main-pic-list-overlay,

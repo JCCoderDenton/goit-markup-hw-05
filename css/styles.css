@@ -162,6 +162,8 @@ h2 {
 .upper-nav li a {
   text-decoration: none;
   transition-duration: 250ms;
+  transition-property: color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   padding: 27px 0;
   color: var(--black-color);
 }
@@ -198,12 +200,14 @@ h2 {
   padding: 32px 0;
   color: rgba(117, 117, 117, 1);
   transition-duration: 250ms;
+  transition-property: color;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .upper-contact li svg {
   fill: var(--white-grey-color);
   transition-duration: 250ms;
+  transition-property: fill;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -328,6 +332,7 @@ h2 {
   background: #FFFFFF1A;
   cursor: pointer;
   transition-duration: 250ms;
+  transition-property: background-color;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -434,6 +439,7 @@ h2 {
   width: 30px;
   height: 30px;
   transition-duration: 250ms;
+  transition-property: color;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
   
@@ -641,6 +647,7 @@ h2 {
   cursor: pointer;
   border-radius: 50%;
   transition-duration: 250ms;
+  transition-property: background-color, fill;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -688,6 +695,7 @@ h2 {
   fill: #AFB1B8;
   cursor: pointer;
   transition-duration: 250ms;
+  transition-property: fill, border;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -812,7 +820,6 @@ h2 {
   transition-duration: 500ms;
   transition-property: height;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  /*transition: .5s ease;*/
 }
 
 a:hover .main-pic-list-overlay,
@@ -828,7 +835,7 @@ a:focus .main-pic-list-overlay{
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
-  line-height: 28px; /* 155.556% */
+  line-height: 28px;
   letter-spacing: 0.54px;
 }
 
